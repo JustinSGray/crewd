@@ -3,8 +3,15 @@ Template.buy.events({
     var email = $(event.target).parent().find('input[type=email]').val();
     var beta = $(event.target).parent().find('input[type=checkbox]').prop('checked');
 
+    var cb = function(error, eId){
+      console.log(error, eId);
+      if(eId){
+        Router.go('/thanks');
+      }
+    }
+
     if(email) {
-      Emails.insert({addr:email, beta:beta});
+      Emails.insert({addr:email, beta:beta}, cb);
     }
   }
 })

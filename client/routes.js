@@ -35,4 +35,10 @@ Router.map(function() {
       }
     },
   });
+
+  this.route('thanks', {
+    path:'/thanks', 
+    template: 'thankyou', 
+    layoutTemplate: 'layout', 
+  });
 });
