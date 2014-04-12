@@ -3,8 +3,12 @@ Template.crewd.events({
 
     var device = $(event.target).attr('device');
 
-
-    Buys.insert({device:device, price: 3});
-    Router.go('purhcase');
+    var cb = function(error, buyId){
+      Session.set('buyId', buyId);
+      //console.log('Bought!', error ,buyId);
+      Router.go('/buy');
+    }
+    Buys.insert({device:device, price: 3}, cb);
+    
   }
 });
