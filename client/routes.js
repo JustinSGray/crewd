@@ -21,7 +21,7 @@ Router.map(function() {
       }
     },
     waitOn: function(){
-      return Meteor.subscribe('buys')
+      return Meteor.subscribe('buys');
     }
   });
 
