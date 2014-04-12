@@ -33,6 +33,9 @@ Router.map(function() {
       if (Meteor.user()){
         Router.go('/dashboard');
       }
+      else{
+        Router.go('/');
+      }
     },
   });
 
