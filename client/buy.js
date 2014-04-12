@@ -13,5 +13,9 @@ Template.buy.events({
     if(email) {
       Emails.insert({addr:email, beta:beta}, cb);
     }
-  }
+  },
+  'click #back': function(event){
+    console.log('test')
+        Router.go('/');
+    }
 })
