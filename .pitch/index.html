@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>reveal.js - The HTML Presentation Framework</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Startup Weekend '14</h1>
+					<p> Jeff Chin </p>
+					<p> Aerospace and Mechanical Engineer </p>
+					<br>
+					<p> <a href="http://jcchin.github.io/StartupWeekend/">jcchin.github.io/StartupWeekend/
+					</a> </p>
+				</section>
+				<section>
+					<h1>Erg Master</h1>
+					<p><em>Indoor Rowing Evolved</em></p>
+					<img src="img/concept2rower.jpg" alt="Concept 2 Indoor Rowing Machine">
+
+					<p> 300,000 rowers in the US <a href="http://www.bhfinder.com/Rowing-Statistics"> [ref]</a></p>
+					<p> Average Income $105,200/yr</p>
+					<p> Total Value of the US Market: $1.1 Billion Annually </p>
+					<p> Indoor rowing year round </p>
+				</section>
+
+				<!--- Meet the team	############################################-->
+				<section > 
+					<h2>Let's Improve This</h2>
+					<img src="img/card_out.png" alt="Concept 2 Indoor Rowing Machine">
+				</section>
+				<section > 
+					<p>Log Practices =  $48</p>
+					<img src="img/logCard.png" alt="Concept 2 Indoor Rowing Machine">
+					<p>Virtual Racing = $90-$2,000</p>
+					<img height="400px" src="img/raceDisplay.jpg" alt="Concept 2 Indoor Rowing Machine">
+				</section>
+
+				<section data-background="#384042" data-transition="linear" data-background-transition="slide">
+					<p>Looking for a team of 5-6 people</p>
+					<br>
+					<ol><font color="#e7ad52">
+						<li> <strong>Android Dev</strong></li>
+						<li><strong>iPhone Dev</strong></li></font><font color="#7DB2DF">
+						<li>Marketing, Business Leader</li>
+						<li>UI and Product Designer</li></font>
+						<li>Web Dev</li>
+						<li>Computer Vision, Hardware</li>
+					</ol>
+				</section>
+				<section data-background="#000000" data-transition="linear" data-background-transition="slide">
+					<p>want to join the team?</p>
+					<p>send me an email at <a href="mailto:jchin89@gmail.com">jchin89@gmail</a></p>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
