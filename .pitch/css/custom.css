@@ -1,0 +1,5 @@
+.reveal section img.plain {
+  border: none;
+  background: transparent;
+  box-shadow: none;
+} 
