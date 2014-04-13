@@ -17,15 +17,15 @@ body, h1, h2, h3, h4, h5, h6 {
 	padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
 	padding-bottom: 50px;
 	color: #f8f8f8;
-	background: url(../img/intro-bg.jpg) no-repeat center center;
+	background: url(../img/rowing_sunset.jpg) no-repeat center center;
 	background-size: cover;
 	text-align: center;
 }
 
 .intro-message {
 	position: relative;
-	padding-top: 8%;
-	padding-bottom: 8%;
+	padding-top: 12%;
+	padding-bottom: 12%;
 }
 
 .intro-message > h1 {
