@@ -4,7 +4,6 @@ from save import save, hog, deskew
 from train_erg_knn import our_classifier, density
 from save import load_tracks
 knn = our_classifier()
-import pylab
 
 cam = cv2.VideoCapture("videos/MVI_0984.MOV")
 
@@ -42,7 +41,6 @@ while True:
         val = np.array(im2, dtype=np.float32).reshape((1,50))
         ret,result,neighbours,dist = knn.find_nearest(val, k=1)
         result = int(result[0][0])
-        t_frame.append(result)
 
         cv2.rectangle(display_frame, tuple(corner), bottom_corner, (0, 255, 0), 2)
         setcnr = tuple([corner[0]+20, corner[1] + 100])
@@ -50,14 +48,10 @@ while True:
         #display_frame[corner[1]:corner[1]+height, corner[0]:corner[0]+width,0] = procframe
         #display_frame[corner[1]:corner[1]+height, corner[0]:corner[0]+width,1] = procframe
         #display_frame[corner[1]:corner[1]+height, corner[0]:corner[0]+width,2] = procframe
-    print t_frame
-    t= t_frame[0]*60 + int(str(t_frame[1]) + str(t_frame[2]))
-    times.append(t)
     ii+=1
     cv2.imshow("Processed", display_frame)
 
     pressed = cv2.waitKey(10) & 255
     if pressed == 27 or ii > 470: #exit program on 'esc'
         cam.release()
-        pylab.plot(times)
-        pylab.show()
+        exit()
