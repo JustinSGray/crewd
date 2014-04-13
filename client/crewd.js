@@ -8,6 +8,7 @@ Template.crewd.events({
       //console.log('Bought!', error ,buyId);
       Router.go('/buy');
     }
+    //console.log(device)
     Buys.insert({device:device, price: 3}, cb);
     
   }
