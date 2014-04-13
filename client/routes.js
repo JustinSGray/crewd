@@ -4,9 +4,6 @@ Router.map(function() {
     template: 'crewd', 
     layoutTemplate: 'layout',
     onBeforeAction: function(){
-      if (Meteor.user()){
-        Router.go('/buy');
-      }
       Session.set('buyId', undefined);
     }
   }); 
@@ -15,11 +12,6 @@ Router.map(function() {
     path:'/buy', 
     template:'buy', 
     layoutTemplate: 'layout', 
-    onBeforeAction: function(){
-      if (Meteor.user()){
-        Router.go('/buy');
-      }
-    },
     waitOn: function(){
       return Meteor.subscribe('buys');
     }
