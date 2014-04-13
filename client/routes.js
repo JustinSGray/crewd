@@ -5,7 +5,7 @@ Router.map(function() {
     layoutTemplate: 'layout',
     onBeforeAction: function(){
       if (Meteor.user()){
-        Router.go('/dashboard');
+        Router.go('/buy');
       }
       Session.set('buyId', undefined);
     }
@@ -17,7 +17,7 @@ Router.map(function() {
     layoutTemplate: 'layout', 
     onBeforeAction: function(){
       if (Meteor.user()){
-        Router.go('/dashboard');
+        Router.go('/buy');
       }
     },
     waitOn: function(){
@@ -31,7 +31,7 @@ Router.map(function() {
     layoutTemplate: 'layout', 
     onBeforeAction: function(){
       if (Meteor.user()){
-        Router.go('/dashboard');
+        Router.go('/buy');
       }
       else{
         Router.go('/');
